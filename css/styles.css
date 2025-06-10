@@ -52,13 +52,13 @@ p {
 }
 
 .navbar-items a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.navbar-items a:hover {
+.navbar-items a:not(.default-btn):hover {
   color: #ff7f50;
 }
 
@@ -66,15 +66,15 @@ p {
 .default-btn {
   padding: 8px 16px;
   background-color: #ff7f50;
-  color: white;
+  color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: 0.5s;
 }
 
 .default-btn:hover {
-  background-color: #e3643c;
+  background-color: #ff1c1c;
 }
 /* main banner */
 
@@ -84,7 +84,7 @@ p {
   background-position: center center;
   padding: 8rem 1rem;
   margin-top: auto;
-  min-height: 400px;
+  min-height: 800px;
   display: flex;
   align-items: center;
 }
@@ -346,9 +346,15 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 1782x) {
+@media (max-width: 2000px) {
   .main-banner {
-    min-width: 100px;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .main-banner {
+    min-height: 480px;
   }
 }
 
@@ -356,7 +362,7 @@ footer a:hover {
 @media (max-width: 1170px) {
   .main-banner {
     padding: 6rem 1rem;
-    min-height: 300px;
+    min-height: 350px;
     text-align: center;
   }
 
@@ -366,6 +372,7 @@ footer a:hover {
   }
 
   .plan {
+    display: flex;
     margin: 0 5px;
   }
 
@@ -379,7 +386,7 @@ footer a:hover {
 }
 
 /* ====== até 1000px ====== */
-@media (max-width: 1027px) {
+@media (max-width: 1050px) {
   .main-banner {
     padding: 5rem 1rem;
     min-height: 290px;
@@ -405,13 +412,16 @@ footer a:hover {
 
   .plans-container {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 130px; /* ou use margin-left */
+    padding-right: 10px; /* para equilibrar a margem direita */
   }
 
   .plan {
-    flex: 1 1 45%;
-    max-width: 300px;
-    margin: 0 10px 20px;
+    flex: 0 0 calc(50% - 20px); /* ajustar para gap + padding */
+    max-width: calc(50% - 20px);
+    margin: 0 0 20px;
   }
 
   .contact-container input,
@@ -567,8 +577,12 @@ footer a:hover {
 
 /* ====== até 479px ====== */
 @media (max-width: 479px) {
-  .main-banner {
-    min-height: 50px;
+  .main-banner img {
+    line-height: 40px;
+  }
+
+  .services-container {
+    font-size: 18px;
   }
 
   .navbar-container {
@@ -631,8 +645,18 @@ footer a:hover {
     box-sizing: border-box;
   }
 
+  .services-container {
+    font-size: 14px;
+  }
+
   .main-banner {
-    max-height: 40px;
+    height: 140px;
+    width: auto;
+  }
+
+  .main-banner img {
+    width: auto; /* largura automática para manter proporção */
+    object-fit: cover; /* dá o efeito de zoom e corta o excesso */
   }
 
   .main-banner h1 {
