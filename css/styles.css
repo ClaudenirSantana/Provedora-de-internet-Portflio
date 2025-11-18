@@ -294,6 +294,8 @@ p {
   margin: 0 auto 20px;
   width: 470px;
   height: 150px;
+  pointer-events: auto;
+  resize: none !important;
 }
 
 .contact-container input[type="submit"] {
@@ -400,6 +402,7 @@ footer a:hover {
   .contact-container input,
   .contact-container textarea {
     width: 90%;
+    resize: none;
   }
 
   .navbar-container {
@@ -463,6 +466,7 @@ footer a:hover {
   .contact-container textarea {
     width: 90%;
     padding: 15px;
+    resize: none;
   }
 }
 
@@ -543,6 +547,7 @@ footer a:hover {
   .contact-container input,
   .contact-container textarea {
     width: 80%;
+    resize: none;
   }
 }
 
