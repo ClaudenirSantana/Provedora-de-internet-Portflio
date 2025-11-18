@@ -23,5 +23,5 @@ HTML5, CSS3, Font Awesome, responsividade com media queries.
 Adaptado para desktop, tablet e celular com reorganização automática de cards, textos e formulários.
 
 ## ▶️ Link do site
-https://claudenirsantana.github.io/Provedora-de-internet-Portflio/
+- https://claudenirsantana.github.io/Provedora-de-internet-Portflio/
 
